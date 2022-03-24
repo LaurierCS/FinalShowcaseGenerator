@@ -21,11 +21,11 @@ import sys
 from urllib2 import urlopen
 
 def Usage():
-  print("Usage$ %s -u <github user> -d <directory> -r <repo> -n <number of commits>" % sys.argv[0])
-  print("  -u <github user>  github user name")
-  print("  -d <directory>    local directory for repos commits")
-  print("  -r <repo>         specific repo")
-  print("  -n <number>       (optional) number of commits (newest to oldest)")
+  print("Usage$ %s -u <your github username to download from> -d <directory where you want to save the downloaded repo> -r <the Github repo to download> -n <number of commits to download>" % sys.argv[0])
+  print("  -u <github user>  your github user name that you want to get the repos from ")
+  print("  -d <directory>    where you want save the downloaded repos (aka commits) from github")
+  print("  -r <repo>         which Github repo to download all the commits from ")
+  print("  -n <number>       (optional) number of commits you want to download (newest to oldest)")
   print("  -l <listonly>     (optional) list only, no checkout")
 
 def main():

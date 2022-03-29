@@ -9,8 +9,8 @@ from pathlib import Path
 # ****************************************
 
 
-for path in Path('Pod1RepoTest').rglob('*.txt'):
-    print("Path: ", path.name, path)
+# for path in Path('Pod1RepoTest').rglob('*.txt'):
+#     print("Path: ", path.name, path)
 
 #The files we want to search for and collect
 file_patterns = [
@@ -18,10 +18,29 @@ file_patterns = [
     "views.py",
     "forms.py",
     "urls.py",
-    "/templates/**/*+(.js|.html)", #Finds all html files in the templates folder
-    "/static/**/*+(.js|.css)", #Finds all js and css files in the static files folder
+    "templates/**/*.html", #Finds all html files in the templates folder
+    # "templates/base.html", #Finds all html files in the templates folder
+
+    "static/**/*+(.css|.js)", #Finds all js and css files in the static files folder
 ]
 
+# for path in Path('Pod1RepoTest').rglob('templates/**/*.html'):
+#     print("Path: ", path.name, path)
+file_paths = {}
 for pattern in file_patterns:
-    for path in Path('Pod1RepoTest').rglob(pattern):
-        print("Path: ", path.name, path)
+    print("PATTERN: ", pattern)
+    if pattern not in file_paths.keys():
+        file_paths[pattern] = Path('Pod1RepoTest').rglob(pattern)
+    
+    print(f"Paths for {pattern}: ", file_paths[pattern])
+    # for path in file_paths[pattern]:
+    #     print("Path: ", path.name, path)
+
+
+# os.mkdir(path)
+# print("Directory '% s' created" % directory)
+
+# for key, value in file_paths.items():
+#     os.mkdir(path)
+
+# print("Directory '% s' created" % directory)

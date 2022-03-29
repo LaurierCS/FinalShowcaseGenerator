@@ -1,15 +1,15 @@
 #!/usr/bin/python
+# **************************************************
+# Usage (how to execute the script)
+# python3 ./all-git-commits.py -u <Git> -d <directory> -r <repo> -n <number of commits>
+# **************************************************
 
-# python3 ./all-git-commits.py -u <user> -d <directory> -r <repo> -n <number of commits>
-#
-# Tool to inspect Github and pull local copies of all commits for
-# for the given user.
-#
-# Why?  Every ask yourself the question 'I know I did this before, but
-#       which repos commit was it in?'
-# With all files local, you can use any serach-in-files app to look.
-#
-# Companion App: all-gethub.py to get all repos for a user.
+# Note for Noah and Ali - copy this command into the terminal and press enter.
+# The files will all start downloading:
+# -------------------------------------------------
+#     python3 ./all-git-commits.py -u LaurierCS -d Pod1RepoTest -r Pod1
+
+
 
 import getopt
 import json
@@ -18,10 +18,11 @@ import shutil
 import subprocess
 import sys
 
-from urllib2 import urlopen
+# from urllib2 import urlopen
+from urllib.request import urlopen
 
 def Usage():
-  print("Usage$ %s -u <github user> -d <directory> -r <repo> -n <number of commits>" % sys.argv[0])
+  print("Usage$ %s -u <github username> -d <directory name to save downloaded files> -r <repo to download> -n <number of commits>" % sys.argv[0])
   print("  -u <github user>  github user name")
   print("  -d <directory>    local directory for repos commits")
   print("  -r <repo>         specific repo")

@@ -83,7 +83,7 @@ def main():
   print(repoLink)
   count = 0
   for commit in commits:
-    d = commit['commit']['committer']['date']
+    d = commit['commit']['committer']['date'].replace(":","-")
     name = commit['commit']['committer']['name']
     sha = commit['sha']
     subdir = "{0}-{1}-{2}-{3}".format(currentRepo, d, name, sha)

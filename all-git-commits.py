@@ -1,15 +1,14 @@
 #!/usr/bin/python
 # **************************************************
 # Usage (how to execute the script)
-# python3 ./all-git-commits.py -u <Git> -d <directory> -r <repo> -n <number of commits>
+# python3 ./all-git-commits.py -u <github username> -d <directory name to save downloaded files> -r <repo to download> -n <number of commits>
 # **************************************************
 
 # Note for Noah and Ali - copy this command into the terminal and press enter.
 # The files will all start downloading:
+# Easy execute command
 # -------------------------------------------------
-#     python3 ./all-git-commits.py -u LaurierCS -d Pod1RepoTest -r Pod1
-
-
+#     python3 ./all-git-commits.py -u LaurierCS -d Pod1RepoTest -r Pod1 -n 4
 
 import getopt
 import json

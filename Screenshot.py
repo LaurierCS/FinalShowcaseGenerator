@@ -29,9 +29,9 @@ import os
 
 #cv2.imwrite("image4.png", image) can be done with path instead as first parameter IMPORTANT
 
-for dirpath, dirnames, filenames in os.walk(r".//manage.py//Pod1//"):
+for dirpath, dirnames, filenames in os.walk(r".//views.py//Pod1//"):
 	for file in filenames:
-		filee="C:\\Users\\capta\\dev\\LCSPods\\FinalShowcaseGenerator\\manage.py\\Pod1\\"+str(file)
+		filee="C:\\Users\\capta\\dev\\LCSPods\\FinalShowcaseGenerator\\views.py\\Pod1\\"+str(file)
 		os.startfile(filee)
 		image = pyautogui.screenshot()
 		image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)

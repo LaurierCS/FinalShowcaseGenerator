@@ -1,0 +1,3 @@
+for any specific file, run the rename first so it can be ordered with numbers
+then run the move
+then run the screenshot and take screenshots of each 
